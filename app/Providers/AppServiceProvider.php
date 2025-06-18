@@ -4,7 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\ServiceProvider;
-
+use App\Models\Task;
+use App\Policies\TaskPolicy;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -18,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
+     protected array $policies = [
+        Task::class => TaskPolicy::class,
+    ];
     public function boot(): void
     {
         ResetPassword::createUrlUsing(function (object $notifiable, string $token) {
