@@ -21,7 +21,7 @@ Esta é uma API RESTful desenvolvida com **Laravel** para gerenciamento de taref
 1. **Clone o projeto**
 
 ```bash
-git clone https://github.com/seu-usuario/todo-api.git
+git clone https://github.com/Proverasamuel/to-do-task-api.git
 cd todo-api
 ```
 
